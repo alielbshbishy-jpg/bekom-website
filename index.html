@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>بيكم | Bekom — تطوير عقاري بالمشاركة</title>
+<meta name="description" content="بيكم شركة تطوير عقاري واستثمار بالمشاركة في برج العرب، الإسكندرية. Together, We Build more.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F5DABF; --deep:#0D2F2C; --forest:#1B3E3B; --moss:#2E5E57;
+  --line:rgba(245,218,191,.28); --soft:rgba(245,218,191,.8);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:'Readex Pro',Tahoma,sans-serif;background:var(--forest);color:var(--cream);line-height:1.9;font-weight:300;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--cream);outline-offset:3px}
+.wrap{max-width:1080px;margin:auto;padding:0 22px}
+h1,h2,h3{font-weight:600;line-height:1.35}
+h2{font-size:clamp(1.9rem,4.5vw,3rem);margin-bottom:18px}
+p{max-width:62ch}
+section{padding:96px 0;position:relative}
+.alt{background:var(--deep)}
+
+/* nav */
+nav{position:fixed;inset:0 0 auto;z-index:10;background:rgba(13,47,44,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+nav img{height:30px;display:block}
+nav ul{display:flex;gap:26px;list-style:none;padding:0;font-size:.92rem}
+nav ul a{opacity:.85}nav ul a:hover{opacity:1}
+.btn{display:inline-block;background:var(--cream);color:var(--deep);padding:11px 26px;border-radius:999px;font-weight:600;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:none;color:var(--cream);border:1px solid var(--cream)}
+@media(max-width:820px){nav ul{display:none}}
+
+/* hero: silk gradient from the brochure cover + the roof from the logo */
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:110px 0 70px;
+  background:
+   radial-gradient(60% 50% at 78% 18%,rgba(74,134,118,.55),transparent 70%),
+   radial-gradient(55% 55% at 15% 85%,rgba(46,94,87,.7),transparent 70%),
+   radial-gradient(40% 30% at 60% 60%,rgba(245,218,191,.07),transparent 70%),
+   var(--deep)}
+.hero::before{content:"";position:absolute;inset:0;opacity:.5;
+  background:repeating-linear-gradient(115deg,transparent 0 46px,rgba(245,218,191,.05) 46px 47px)}
+.hero .wrap{position:relative}
+.hero img.big{width:min(560px,82vw);margin:0 auto 30px;display:block}
+.hero h1{font-size:clamp(1.8rem,5vw,3.2rem);margin-bottom:12px}
+.hero .en{letter-spacing:.35em;font-size:.95rem;opacity:.85;margin-bottom:34px;direction:ltr}
+.hero .row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.hero-ph{display:none}
+
+/* story */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.quote{border:1px solid var(--line);border-radius:28px;padding:34px;font-size:1.05rem;background:rgba(13,47,44,.35)}
+.quote p+p{margin-top:14px}
+@media(max-width:820px){.split{grid-template-columns:1fr;gap:30px}section{padding:70px 0}}
+.mark{width:92px;opacity:.95;margin-bottom:22px;display:block}
+
+/* vision / mission */
+.vm{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:34px}
+.vm div{padding:34px;border:1px solid var(--line);border-radius:28px 28px 28px 4px}
+.vm div:last-child{border-radius:28px 28px 4px 28px;background:var(--cream);color:var(--deep)}
+.vm h3{font-size:1.4rem;margin-bottom:10px}
+@media(max-width:820px){.vm{grid-template-columns:1fr}}
+
+/* difference */
+.diff{margin-top:28px;font-size:1.15rem}
+.diff mark{background:var(--cream);color:var(--deep);padding:2px 10px;border-radius:6px;font-weight:600}
+
+/* model: a real sequence, so numbers are meaningful */
+.steps{list-style:none;padding:0;margin:44px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:0;counter-reset:s;border-top:1px solid var(--line)}
+.steps li{counter-increment:s;padding:30px 24px 34px;border-bottom:1px solid var(--line);border-inline-start:1px solid var(--line)}
+.steps li:nth-child(3n+1){border-inline-start:0}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:42px;height:42px;border-radius:50% 50% 50% 4px;background:var(--cream);color:var(--deep);font-weight:600;margin-bottom:14px}
+.steps h3{font-size:1.2rem;margin-bottom:4px}
+.steps p{font-size:.95rem;color:var(--soft)}
+@media(max-width:820px){.steps{grid-template-columns:1fr 1fr}.steps li:nth-child(3n+1){border-inline-start:1px solid var(--line)}.steps li:nth-child(odd){border-inline-start:0}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}.steps li{border-inline-start:0!important}}
+
+/* cost + booking */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+@media(max-width:820px){.two{grid-template-columns:1fr;gap:44px}}
+.two h2{font-size:clamp(1.5rem,3.4vw,2.2rem)}
+
+/* values */
+.vals{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:40px}
+.vals div{border:1px solid var(--line);border-radius:22px;padding:26px 10px;text-align:center;font-weight:600}
+.vals svg{width:44px;height:44px;stroke:var(--cream);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;display:block;margin:0 auto 12px}
+@media(max-width:820px){.vals{grid-template-columns:repeat(2,1fr)}}
+
+/* contact */
+.contact{text-align:center;background:radial-gradient(60% 80% at 50% 100%,rgba(74,134,118,.45),transparent 70%),var(--deep)}
+.contact h2{margin-inline:auto}
+.contact p{margin:0 auto 34px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 auto;max-width:900px}
+.cards a{border:1px solid var(--line);border-radius:22px;padding:24px 14px;display:block;transition:background .2s}
+.cards a:hover{background:rgba(245,218,191,.08)}
+.cards b{display:block;font-weight:600;margin-bottom:4px}
+.cards span{direction:ltr;unicode-bidi:embed;display:inline-block;font-size:.95rem;word-break:break-all}
+@media(max-width:700px){.cards{grid-template-columns:1fr}}
+footer{padding:32px 0;text-align:center;font-size:.85rem;border-top:1px solid var(--line);background:var(--deep)}
+footer img{height:34px;margin:0 auto 10px;display:block}
+
+/* one orchestrated moment: hero logo reveals once */
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.hero .wrap>*{animation:rise .9s both}
+.hero .wrap>*:nth-child(2){animation-delay:.15s}.hero .wrap>*:nth-child(3){animation-delay:.3s}.hero .wrap>*:nth-child(4){animation-delay:.45s}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" aria-label="Bekom"><img src="logo-wordmark.png" alt="Bekom"></a>
+    <ul>
+      <li><a href="#story">حكايتنا</a></li>
+      <li><a href="#model">نموذج المشاركة</a></li>
+      <li><a href="#booking">جدية الحجز</a></li>
+      <li><a href="#why">ليه بيكم</a></li>
+    </ul>
+    <a class="btn" href="#contact">تواصل معنا</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <img class="big" src="logo-wordmark.png" alt="Bekom — Together, We Build more">
+    <h1>مع بعض.. نقدر نبني أكتر</h1>
+    <p class="en" style="margin-inline:auto">REAL ESTATE DEVELOPMENT</p>
+    <div class="row">
+      <a class="btn" href="#model">اعرف نموذج المشاركة</a>
+      <a class="btn ghost" href="#contact">كلمنا</a>
+    </div>
+  </div>
+</header>
+
+<section id="story">
+  <div class="wrap split">
+    <div>
+      <img class="mark" src="logo-mark.png" alt="">
+      <h2>حكاية بيكم</h2>
+      <p>كل حاجة كبيرة بدأت بفكرة. وفكرتنا بدأت من إيماننا إن امتلاك البيت ممكن يكون ليه طريق مختلف.</p>
+    </div>
+    <div class="quote">
+      <p>سألنا نفسنا: ليه لازم تشتري وحدة جاهزة بسعر نهائي، من غير ما تكون عارف تفاصيل تكلفتها ورحلة بنائها؟ وليه متكونش جزء من المشروع من أول خطوة؟</p>
+      <p>تشارك في اختيار الأرض، وتعرف تفاصيل التكلفة، وتتابع مراحل البناء، وتشوف حلمك بيتحول لحقيقة قدام عينك.</p>
+      <p>من هنا اتولدت فكرة بيكم: مفهوم مختلف في التطوير العقاري، قائم على المشاركة والوضوح. إحنا بنؤمن إن البيت مش مجرد مساحة وجدران، لكنه حلم ومستقبل وقيمة بتتبني مع الوقت.</p>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="about">
+  <div class="wrap">
+    <h2>من نحن؟</h2>
+    <p>بيكم شركة متخصصة في التطوير العقاري والاستثمار بالمشاركة. بنشتغل على تنظيم وإدارة مشروعات عقارية تجمع الأفراد حول هدف واحد، من دراسة الأرض واختيار الموقع، للتخطيط والتصميم والتنفيذ وصولًا للتسليم.</p>
+    <p style="margin-top:14px">إحنا مش شركة مقاولات ومش شركة تشطيبات. إحنا نموذج مختلف المشاركة فيه أساس العلاقة.</p>
+    <div class="vm">
+      <div><h3>رؤيتنا</h3><p>نصل ليوم يكون فيه الاستثمار العقاري فرصة أقرب لناس أكتر. نشوف أفراد عندهم أحلام يقدروا يجتمعوا ويحققوا مع بعض مشروعات كانت صعبة على كل واحد لوحده. اسم الناس تثق فيه.</p></div>
+      <div><h3>رسالتنا</h3><p>نخلي المشاركة بداية حقيقية لفرص أكبر. نجمع الناس اللي عندها نفس الطموح ونساعدهم يدخلوا مشروعات عقارية من خلال نظام واضح يبدأ بدراسة الفكرة وينتهي بمشروع حقيقي. كل مساهمة وراها تعب وحلم وثقة، وده مسؤولية بنحترمها.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <h2>إحنا مش بنبني مباني وبس.. إحنا بنبني أحلام بتجمعنا</h2>
+    <p>الشراكة مش مجرد مساهمة مالية، لكنها مشاركة في فكرة وهدف ومسؤولية. والنجاح الحقيقي مش إننا نخلص مشروع ونبيعه، لكن إننا نخلق تجربة كل شخص فيها فاهم بيشارك في إيه وإيه حقوقه.</p>
+    <p class="diff">إنت مش مجرد مشتري لوحدة جاهزة. بتشارك في مشروعك من البداية، وبتعرف تفاصيل التكلفة والميزانية، وبتتابع مراحل البناء، وبتعرف مساهمتك بتتصرف في إيه، وحقوقك والتزاماتك من أول يوم. <mark>إنت بتشارك في صناعة النتيجة</mark></p>
+  </div>
+</section>
+
+<section class="alt" id="model">
+  <div class="wrap">
+    <h2>نموذج المشاركة</h2>
+    <p>رحلة واضحة من أول فكرة لحد المفتاح.</p>
+    <ol class="steps">
+      <li><h3>تكوين الشراكة</h3><p>نجمع الشركاء حول هدف واحد.</p></li>
+      <li><h3>دراسة الجدوى</h3><p>نختبر الفكرة بالأرقام قبل أي قرار.</p></li>
+      <li><h3>اختيار الأرض</h3><p>الموقع بيتختار بمشاركتك.</p></li>
+      <li><h3>التصميم والتجهيز</h3><p>تخطيط وتصميم وتجهيز للتنفيذ.</p></li>
+      <li><h3>البناء والتنفيذ</h3><p>من الحفر والأساسات لحد المبنى.</p></li>
+      <li><h3>التسليم</h3><p>تستلم وإنت عارف كل خطوة حصلت.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap two">
+    <div>
+      <h2>ليه تدفع تكلفة وحدة جاهزة لو ممكن تشارك في بنائها؟</h2>
+      <p>سعر الوحدة الجاهزة نتيجة رحلة كاملة من شراء الأرض والتطوير والبناء والتسويق وهوامش البيع. في المشاركة بتدخل من البداية وبتساهم في التكاليف الفعلية وفق ميزانية معلنة، وده ممكن يتيح لك فرصة الحصول على وحدة بتكلفة مختلفة.</p>
+      <p style="margin-top:12px">مش بنوعدك إن كل مشروع هيكون الأرخص، لكن بنوعدك بوضوح التكلفة. هدفنا إنك تكون فاهم القيمة اللي دفعت فيها.</p>
+    </div>
+    <div>
+      <h2>كل جنيه بتدفعه.. وراه خطوة في بناء بيتك</h2>
+      <p>من حقك تشوف نتيجة كل مساهمة، من تجهيز الأرض والحفر والأساسات لحد الأعمدة والخرسانة والمباني والتأسيسات. كل مرحلة بتكون عارف إيه اللي اتنفذ وإيه الخطوة الجاية، ومع كل تقرير بتشوف مساهمتك بتتحول من أرقام إلى واقع.</p>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="booking">
+  <div class="wrap">
+    <h2>جدية الحجز والمساهمات</h2>
+    <p>قبل ما تبدأ بتتعرف على تفاصيل المشروع وقيمة المساهمة وجدول الدفعات وشروط الحجز. مبلغ جدية الحجز بيتوثق بإيصال رسمي وبيتحسب ضمن إجمالي مساهمتك. وكل دفعة مثبتة وكل مبلغ ليه حساب، وشروط الاسترداد والانسحاب موضحة من البداية.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>ليه تختار بيكم؟</h2>
+    <div class="vals">
+      <div><svg viewBox="0 0 48 48"><path d="M24 5l15 6v11c0 10-6 17-15 21C15 39 9 32 9 22V11z"/><path d="M17 24l5 5 9-10"/></svg>الثقة</div>
+      <div><svg viewBox="0 0 48 48"><path d="M12 6h17l8 8v28H12z"/><circle cx="22" cy="26" r="7"/><path d="M27 31l7 7"/></svg>الشفافية</div>
+      <div><svg viewBox="0 0 48 48"><path d="M5 24l10-8 9 4 9-4 10 8-9 10-6-3-6 6-8-5z"/></svg>المشاركة</div>
+      <div><svg viewBox="0 0 48 48"><path d="M8 40L40 8M12 8l28 32"/><circle cx="24" cy="24" r="4"/></svg>التخطيط</div>
+      <div><svg viewBox="0 0 48 48"><path d="M24 6v34M10 40h28M8 16h32"/><path d="M8 16l-4 12h12zM40 16l-4 12h12z"/></svg>المسؤولية</div>
+    </div>
+    <p style="margin-top:44px">مش بنقول إن الطريق دايمًا سهل ومش بنوعدك بمكاسب مضمونة، لكن بنؤمن إن كل مشروع ناجح لازم يبدأ بتخطيط صح وشراكة واضحة وإدارة مسؤولة. عايزين نكبر بمشروعاتنا وبالناس اللي قررت تكون جزء من رحلتنا.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>مع بعض.. نقدر نبني أكتر</h2>
+    <p>اتواصل معنا واعرف المشروعات المتاحة وتفاصيل المشاركة.</p>
+    <div class="cards">
+      <a href="tel:+201091335522"><b>اتصل بينا</b><span>+20 1091 33 55 22</span></a>
+      <a href="https://wa.me/201091335522" target="_blank" rel="noopener"><b>واتساب</b><span>+20 1091 33 55 22</span></a>
+      <a href="mailto:Bekom.onlinee@gmail.com"><b>البريد الإلكتروني</b><span>Bekom.onlinee@gmail.com</span></a>
+    </div>
+    <p style="margin-top:30px">برج العرب، الإسكندرية، مصر</p>
+  </div>
+</section>
+
+<footer>
+  <img src="logo-mark.png" alt="Bekom">
+  <div dir="ltr">© <span id="y"></span> Bekom Real Estate Development · Together, We Build more</div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
